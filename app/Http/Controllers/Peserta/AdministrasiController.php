@@ -43,6 +43,11 @@ class AdministrasiController extends Controller
             'karya_tulis' => 'mimes:pdf,doc|max:1024',
             'foto_wajah' => 'mimes:png,jpg,jpeg|max:1024',
             'foto_body' => 'mimes:png,jpg,jpeg|max:1024',
+            'sk_domisili' => 'mimes:png,jpg,jpeg|max:1024',
+            'ijazah' => 'mimes:png,jpg,jpeg|max:1024',
+            'sk_sehat' => 'mimes:png,jpg,jpeg|max:1024',
+            'kta' => 'mimes:png,jpg,jpeg|max:1024',
+
         ]);
         if($request->hasFile('cv')) {
             $file = $request->file('cv');
@@ -71,6 +76,34 @@ class AdministrasiController extends Controller
             '.'. $file->getClientOriginalExtension();
             $file->move('images/foto_body/', $fileName);
             $data['foto_body'] = $fileName;
+        }
+        if($request->hasFile('sk_domisili')) {
+            $file = $request->file('sk_domisili');
+            $fileName = 'sk_domisili_' . uniqid() . '_' . date("Ymd") . 
+            '.'. $file->getClientOriginalExtension();
+            $file->move('images/sk_domisili/', $fileName);
+            $data['sk_domisili'] = $fileName;
+        }
+        if($request->hasFile('ijazah')) {
+            $file = $request->file('ijazah');
+            $fileName = 'ijazah_' . uniqid() . '_' . date("Ymd") . 
+            '.'. $file->getClientOriginalExtension();
+            $file->move('images/ijazah/', $fileName);
+            $data['ijazah'] = $fileName;
+        }
+        if($request->hasFile('sk_sehat')) {
+            $file = $request->file('sk_sehat');
+            $fileName = 'sk_sehat_' . uniqid() . '_' . date("Ymd") . 
+            '.'. $file->getClientOriginalExtension();
+            $file->move('images/sk_sehat/', $fileName);
+            $data['sk_sehat'] = $fileName;
+        }
+        if($request->hasFile('kta')) {
+            $file = $request->file('kta');
+            $fileName = 'kta_' . uniqid() . '_' . date("Ymd") . 
+            '.'. $file->getClientOriginalExtension();
+            $file->move('images/kta/', $fileName);
+            $data['kta'] = $fileName;
         }
        
 

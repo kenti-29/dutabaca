@@ -1,6 +1,6 @@
 @extends('layouts.peserta')
 @section('title')
-Dashboard Peserta
+Hasil Seleksi Peserta
 @endsection
 
 @section('css')

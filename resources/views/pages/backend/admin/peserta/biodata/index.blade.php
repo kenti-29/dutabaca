@@ -43,15 +43,7 @@ Biodata Peserta
                                 <div class="table-responsive">
                                     <table id="table-1" class="table table-striped">
                                         <thead>
-                                            <th class="text-center pt-2">
-                                                <div class="custom-checkbox custom-checkbox-table custom-control">
-                                                    <input type="checkbox" data-checkboxes="mygroup"
-                                                        data-checkbox-role="dad" class="custom-control-input"
-                                                        id="checkbox-all">
-                                                    <label for="checkbox-all"
-                                                        class="custom-control-label">&nbsp;</label>
-                                                </div>
-                                            </th>
+                                            <th>No</th>
                                             <th>Nama</th>
                                             <th>Username</th>
                                             <th>Tanggal lahir</th>
@@ -66,15 +58,7 @@ Biodata Peserta
                                             @endphp
                                             @foreach ($users as $user)
                                             <tr>
-                                                <td class="text-center">
-                                                    <div class="custom-checkbox custom-control">
-                                                        <input type="checkbox" data-checkboxes="mygroup"
-                                                            class="custom-control-input"
-                                                            id="checkbox-{{$loop->iteration}}">
-                                                        <label for="checkbox-{{$loop->iteration}}"
-                                                            class="custom-control-label">&nbsp;</label>
-                                                    </div>
-                                                </td>
+                                                <td>{{$loop->iteration}}</td>
                                                 <td>{{ $user->name }}</td>
                                                 <td>{{ $user->username }}</td>
                                                 <td>{{ $user->tgl_lahir }}</td>

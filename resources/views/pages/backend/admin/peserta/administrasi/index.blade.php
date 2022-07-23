@@ -41,19 +41,16 @@ Administrasi Peserta
                                 <div class="table-responsive">
                                     <table id="table-1" class="table table-striped">
                                         <thead>
-                                            <th class="text-center pt-2">
-                                                <div class="custom-checkbox custom-checkbox-table custom-control">
-                                                    <input type="checkbox" data-checkboxes="mygroup"
-                                                        data-checkbox-role="dad" class="custom-control-input"
-                                                        id="checkbox-all">
-                                                    <label for="checkbox-all"
-                                                        class="custom-control-label">&nbsp;</label>
-                                                </div>
-                                            </th>
+                                            <th>No</th>
                                             <th>Nama</th>
                                             <th>CV</th>
                                             <th>Foto Wajah</th>
                                             <th>Foto Full Body</th>
+                                            <th>Ketergangan Domisili</th>
+                                            <th>Ijazah</th>
+                                            <th>SK-Sehat</th>
+                                            <th>KTA</th>
+                                            <th>Karya Tulis</th>
                                             <th>Nilai</th>
                                             <th>Aksi</th>
                                             <th>Status</th>
@@ -64,15 +61,7 @@ Administrasi Peserta
                                             @endphp
                                             @foreach ($administrasis as $administrasi)
                                             <tr>
-                                                <td class="text-center">
-                                                    <div class="custom-checkbox custom-control">
-                                                        <input type="checkbox" data-checkboxes="mygroup"
-                                                            class="custom-control-input"
-                                                            id="checkbox-{{$loop->iteration}}">
-                                                        <label for="checkbox-{{$loop->iteration}}"
-                                                            class="custom-control-label">&nbsp;</label>
-                                                    </div>
-                                                </td>
+                                                <td>{{$loop->iteration}}</td>
                                                 <td>{{ $administrasi->user->name }}</td>
                                                 <td>{{ $administrasi->cv }}
                                                     <a href="{{ asset('images/cv/' . $administrasi->cv) }}"
@@ -87,6 +76,26 @@ Administrasi Peserta
                                                         href="{{ asset('images/foto_body/' . $administrasi->foto_body) }}"
                                                         target="_blank">View</a>
 
+                                                </td>
+                                                <td>{{ $administrasi->sk_domisili }} <a
+                                                        href="{{ asset('images/sk_domisili/' . $administrasi->sk_domisili) }}"
+                                                        target="_blank">View</a>
+                                                </td>
+                                                <td>{{ $administrasi->ijazah }} <a
+                                                        href="{{ asset('images/ijazah/' . $administrasi->ijazah) }}"
+                                                        target="_blank">View</a>
+                                                </td>
+                                                <td>{{ $administrasi->sk_sehat }} <a
+                                                        href="{{ asset('images/sk_sehat/' . $administrasi->sk_sehat) }}"
+                                                        target="_blank">View</a>
+                                                </td>
+                                                <td>{{ $administrasi->kta }} <a
+                                                        href="{{ asset('images/kta/' . $administrasi->kta) }}"
+                                                        target="_blank">View</a>
+                                                </td>
+                                                <td>{{ $administrasi->karya_tulis }} <a
+                                                        href="{{ asset('images/karya_tulis/' . $administrasi->karya_tulis) }}"
+                                                        target="_blank">View</a>
                                                 </td>
                                                 <td>{{ count($administrasi->Penilaian) ==0 ?
                                                     '0':$administrasi->Penilaian->sum('nilai_administrasi')

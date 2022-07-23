@@ -45,7 +45,7 @@ Program Kerja
                                 <div class="table-responsive">
                                     <table id="table-1" class="table table-striped">
                                         <thead>
-                                            <th class="text-center pt-2">
+                                            {{-- <th class="text-center pt-2">
                                                 <div class="custom-checkbox custom-checkbox-table custom-control">
                                                     <input type="checkbox" data-checkboxes="mygroup"
                                                         data-checkbox-role="dad" class="custom-control-input"
@@ -53,7 +53,7 @@ Program Kerja
                                                     <label for="checkbox-all"
                                                         class="custom-control-label">&nbsp;</label>
                                                 </div>
-                                            </th>
+                                            </th> --}}
                                             <th>No</th>
                                             <th>Nama</th>
                                             <th>Action</th>
@@ -64,7 +64,7 @@ Program Kerja
                                             @endphp
                                             @foreach ($prokers as $proker)
                                             <tr>
-                                                <td class="text-center">
+                                                {{-- <td class="text-center">
                                                     <div class="custom-checkbox custom-control">
                                                         <input type="checkbox" data-checkboxes="mygroup"
                                                             class="custom-control-input"
@@ -72,7 +72,7 @@ Program Kerja
                                                         <label for="checkbox-{{$loop->iteration}}"
                                                             class="custom-control-label">&nbsp;</label>
                                                     </div>
-                                                </td>
+                                                </td> --}}
                                                 <td>{{$loop->iteration}}</td>
                                                 <td>{{ $proker->nama }}</td>
                                                 <td>

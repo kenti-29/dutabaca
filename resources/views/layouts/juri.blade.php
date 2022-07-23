@@ -102,8 +102,8 @@
 
             </div>
             <footer class="main-footer">
-                <div class="footer-left">
-                    Copyright &copy; <div class="bullet"></div> Kenti-1903016</a>
+                <div class="footer-right">
+                    Copyright &copy;Kenti-1903016</a>
                 </div>
             </footer>
         </div>

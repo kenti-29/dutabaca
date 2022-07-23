@@ -64,7 +64,7 @@ class AdministrasiController extends Controller
      */
     public function edit($id)
     {
-        $penilaian=Penilaian::find($id);
+        $penilaian= Penilaian::where('administrasi_id', $id)->where('juri_id', Auth::user()->id)->first();
         return view('pages.backend.juri.penilaian.administrasi.edit', compact('id','penilaian'));
     }
 

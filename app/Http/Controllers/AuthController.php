@@ -70,7 +70,7 @@ class AuthController extends Controller
         
         
         
-        return redirect()->route('login')->with('status', 'Berhasil Daftar Akun Duta Baca, Silahkan masuk menggunakan akun username dan password yang sudah didaftarkan');
+        return redirect()->route('login')->with('status', 'Selamat Berhasil Mendaftar Akun Duta Baca, Silahkan login menggunakan akun username dan password yang sudah didaftarkan');
     }
     public function logout(Request $request)
     {

@@ -19,7 +19,7 @@ class CreateBeritasTable extends Migration
             $table->string('judul');
             $table->string('gambar');
             $table->string('dokumen');
-            $table->string('deskripsi');
+            $table->longText('deskripsi');
             $table->date('tanggal');
             $table->timestamps();
         });

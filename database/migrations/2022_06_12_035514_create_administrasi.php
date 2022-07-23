@@ -20,6 +20,10 @@ class CreateAdministrasi extends Migration
             $table->string('foto_wajah')->nullable();
             $table->string('foto_body')->nullable();
             $table->string('karya_tulis')->nullable();
+            $table->string('sk_domisili')->nullable();
+            $table->string('ijazah')->nullable();
+            $table->string('sk_sehat')->nullable();
+            $table->string('kta')->nullable();
             $table->enum('status',['lolos', 'tidaklolos'])->nullable();
             $table->timestamps();
         });

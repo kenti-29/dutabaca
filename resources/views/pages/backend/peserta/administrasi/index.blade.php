@@ -48,27 +48,50 @@ Administrasi
                         @endif
                         <div class="card-body">
                             <div class="form-group">
-                                <label>CV</label>
+                                <label>CV (pdf/doc)</label>
                                 <input type="file" id="cv" name="cv" class="form-control">
                                 <a href="{{ asset('images/cv/' . $administrasi->cv) }}" target="_blank">Lihat File</a>
                             </div>
                             <div class="form-group ">
-                                <label>Karya Tulis</label>
+                                <label>Karya Tulis (pdf/doc)</label>
                                 <input type="file" id="karya_tulis" name="karya_tulis" class="form-control">
                                 <a href="{{ asset('images/karya_tulis/' . $administrasi->karya_tulis) }}"
                                     target="_blank">Lihat File</a>
                             </div>
                             <div class="form-group ">
-                                <label>Foto Wajah</label>
+                                <label>Foto Close Up (png/jpg/jpeg)</label>
                                 <input type="file" id="foto_wajah" name="foto_wajah" class="form-control">
                                 <img src="{{ asset('images/foto_wajah/' . $administrasi->foto_wajah) }}"
                                     alt="foto_wajah" width="100">
                             </div>
                             <div class="form-group ">
-                                <label>Foto Body</label>
+                                <label>Foto Full Body (png/jpg/jpeg)</label>
                                 <input type="file" id="foto_body" name="foto_body" class="form-control">
                                 <img src="{{ asset('images/foto_body/' . $administrasi->foto_body) }}" alt="foto_body"
                                     width="100">
+                            </div>
+                            <div class="form-group ">
+                                <label>Keterangan Domisili Indramayu (png/jpg/jpeg)</label>
+                                <input type="file" id="sk_domisili" name="sk_domisili" class="form-control">
+                                <img src="{{ asset('images/sk_domisili/' . $administrasi->sk_domisili) }}"
+                                    alt="sk_domisili" width="100">
+                            </div>
+                            <div class="form-group ">
+                                <label>Ijazah Terakhir (png/jpg/jpeg)</label>
+                                <input type="file" id="ijazah" name="ijazah" class="form-control">
+                                <img src="{{ asset('images/ijazah/' . $administrasi->ijazah) }}" alt="ijazah"
+                                    width="100">
+                            </div>
+                            <div class="form-group ">
+                                <label>Surat Keterangan Sehat (png/jpg/jpeg)</label>
+                                <input type="file" id="sk_sehat" name="sk_sehat" class="form-control">
+                                <img src="{{ asset('images/sk_sehat/' . $administrasi->sk_sehat) }}" alt="sk_sehat"
+                                    width="100">
+                            </div>
+                            <div class="form-group ">
+                                <label>Kartu Tanda Anggota Perpustakaan Umum Indramayu (png/jpg/jpeg)</label>
+                                <input type="file" id="kta" name="kta" class="form-control">
+                                <img src="{{ asset('images/kta/' . $administrasi->kta) }}" alt="kta" width="100">
                             </div>
                             <div class="form-group row mb-4">
                                 <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>

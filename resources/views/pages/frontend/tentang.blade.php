@@ -54,7 +54,7 @@
                     </div>
                     <div class="col-lg-6 pt-5 pt-lg-0">
                         <h3 data-aos="fade-up">Duta Baca Kabupaten Indramayu</h3>
-                        <p class="description" data-aos="fade-up" data-aos-delay="100">
+                        <p style="text-align: justify;" data-aos="fade-up" data-aos-delay="100">
                             Duta Baca merupakan salah satu program Dinas Perpustakaan dan Arsip Kabupaten Indramayu yang
                             menampilkan
                             sosok inspiratif untuk menjadi motivator dalam membangkitkan kegemaran membaca dan
@@ -68,13 +68,17 @@
                             </div>
                         </div>
                         <div class="col-lg-24 pt-10 pt-lg-0">
-                            <p class="description">1. Undang-Undang Nomor 43 Tahun 2007 tentang Perpustakaan; </p>
-                            <p class="description">2. Peraturan Pemerintah Nomor 24 Tahun 2014 tentang Pelaksanaan
+                            <p class="description" style="text-align: justify;">1. Undang-Undang Nomor 43 Tahun 2007
+                                tentang Perpustakaan; </p>
+                            <p class="description" style="text-align: justify;">2. Peraturan Pemerintah Nomor 24 Tahun
+                                2014 tentang Pelaksanaan
                                 Undang-Undang Nomor 43 Tahun 2007 tentang Perpustakaan; </p>
-                            <p class="description">3. Peraturan Daerah Provinsi Jawa Barat Nomor 17 Tahun 2011 tentang
+                            <p class="description" style="text-align: justify;">3. Peraturan Daerah Provinsi Jawa Barat
+                                Nomor 17 Tahun 2011 tentang
                                 Penyelenggaraan
                                 Perpustakaan; </p>
-                            <p class="description">4. Peraturan Daerah Kabupaten Indramayu Nomor 3 Tahun 2018 tentang
+                            <p class="description" style="text-align: justify;">4. Peraturan Daerah Kabupaten Indramayu
+                                Nomor 3 Tahun 2018 tentang
                                 Program Pengembangan Indramayu Membaca; </p>
                         </div>
                         <div class="row">
@@ -84,18 +88,23 @@
                             </div>
                         </div>
                         <div class="col-lg-24 pt-10 pt-lg-0">
-                            <p class="description">1. Sebagai influencer dan motivator dalam upaya peningkatan minat,
+                            <p class="description" style="text-align: justify;">1. Sebagai influencer dan motivator
+                                dalam upaya peningkatan minat,
                                 gemar dan budaya
                                 membaca masyarakat di Kabupaten Indramayu. </p>
-                            <p class="description">2. Meningkatkan kesadaran pentingnya membaca dan literasi sebagai
+                            <p class="description" style="text-align: justify;">2. Meningkatkan kesadaran pentingnya
+                                membaca dan literasi sebagai
                                 pembentuk SDM
                                 unggul dan berdaya saing. </p>
-                            <p class="description">3. Menjadi seorang pelopor dan penggiat literasi di Kabupaten
+                            <p class="description" style="text-align: justify;">3. Menjadi seorang pelopor dan penggiat
+                                literasi di Kabupaten
                                 Indramayu. </p>
-                            <p class="description">4. Menumbuhkembangkan budi pekerti melalui pembudayaan ekosistem
+                            <p class="description" style="text-align: justify;">4. Menumbuhkembangkan budi pekerti
+                                melalui pembudayaan ekosistem
                                 literasi agar
                                 terwujudnya long life education. </p>
-                            <p class="description">5. Sebagai upaya untuk mewujudkan masyarakat Kabupaten Indramayu yang
+                            <p class="description" style="text-align: justify;">5. Sebagai upaya untuk mewujudkan
+                                masyarakat Kabupaten Indramayu yang
                                 literat. </p>
                         </div>
                     </div>

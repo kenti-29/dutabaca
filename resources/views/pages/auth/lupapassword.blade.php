@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
     <title>Lupa Password &mdash;</title>
+    <link href="{{asset('landing/img/logo.png')}}" rel="icon">
+    <link href="{{asset('landing/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
 
     <!-- General CSS Files -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"

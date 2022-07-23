@@ -77,15 +77,7 @@ Peserta
                                 <div class="table-responsive">
                                     <table id="table-1" class="table table-striped">
                                         <thead>
-                                            <th class="text-center pt-2">
-                                                <div class="custom-checkbox custom-checkbox-table custom-control">
-                                                    <input type="checkbox" data-checkboxes="mygroup"
-                                                        data-checkbox-role="dad" class="custom-control-input"
-                                                        id="checkbox-all">
-                                                    <label for="checkbox-all"
-                                                        class="custom-control-label">&nbsp;</label>
-                                                </div>
-                                            </th>
+                                            <th>No</th>
                                             <th>Nama</th>
                                             <th>Administrasi</th>
                                             <th>Tes</th>
@@ -102,15 +94,7 @@ Peserta
                                             @endphp
                                             @foreach ($administrasis as $administrasi)
                                             <tr>
-                                                <td class="text-center">
-                                                    <div class="custom-checkbox custom-control">
-                                                        <input type="checkbox" data-checkboxes="mygroup"
-                                                            class="custom-control-input"
-                                                            id="checkbox-{{$loop->iteration}}">
-                                                        <label for="checkbox-{{$loop->iteration}}"
-                                                            class="custom-control-label">&nbsp;</label>
-                                                    </div>
-                                                </td>
+                                                <td>{{$loop->iteration}}</td>
                                                 <td>{{ $administrasi->user->name }}</td>
                                                 <td>{{ $administrasi->Penilaian->sum('nilai_administrasi') }}</td>
                                                 <td>{{ $administrasi->Penilaian->sum('nilai_testulis') }}</td>
@@ -149,15 +133,7 @@ Peserta
                                 <div class="table-responsive">
                                     <table id="table-2" class="table table-striped">
                                         <thead>
-                                            <th class="text-center pt-2">
-                                                <div class="custom-checkbox custom-checkbox-table custom-control">
-                                                    <input type="checkbox" data-checkboxes="mygroup"
-                                                        data-checkbox-role="dad" class="custom-control-input"
-                                                        id="checkbox-all">
-                                                    <label for="checkbox-all"
-                                                        class="custom-control-label">&nbsp;</label>
-                                                </div>
-                                            </th>
+                                            <th>No</th>
 
                                             <th>Nama</th>
                                             <th>Administrasi</th>
@@ -175,15 +151,7 @@ Peserta
                                             @endphp
                                             @foreach ($administrasis->where('status', 'lolos')->all() as $administrasi)
                                             <tr>
-                                                <td class="text-center">
-                                                    <div class="custom-checkbox custom-control">
-                                                        <input type="checkbox" data-checkboxes="mygroup"
-                                                            class="custom-control-input"
-                                                            id="checkbox-{{$loop->iteration}}">
-                                                        <label for="checkbox-{{$loop->iteration}}"
-                                                            class="custom-control-label">&nbsp;</label>
-                                                    </div>
-                                                </td>
+                                                <td>{{$loop->iteration}}</td>
                                                 <td>{{ $administrasi->user->name }}</td>
                                                 <td>{{ $administrasi->Penilaian->sum('nilai_administrasi') }}</td>
                                                 <td>{{ $administrasi->Penilaian->sum('nilai_testulis') }}</td>
@@ -222,15 +190,7 @@ Peserta
                                 <div class="table-responsive">
                                     <table id="table-3" class="table table-striped">
                                         <thead>
-                                            <th class="text-center pt-2">
-                                                <div class="custom-checkbox custom-checkbox-table custom-control">
-                                                    <input type="checkbox" data-checkboxes="mygroup"
-                                                        data-checkbox-role="dad" class="custom-control-input"
-                                                        id="checkbox-all">
-                                                    <label for="checkbox-all"
-                                                        class="custom-control-label">&nbsp;</label>
-                                                </div>
-                                            </th>
+                                            <th>No</th>
 
                                             <th>Nama</th>
                                             <th>Administrasi</th>
@@ -249,15 +209,7 @@ Peserta
                                             @foreach ($administrasis->where('status', 'tidaklolos')->all() as
                                             $administrasi)
                                             <tr>
-                                                <td class="text-center">
-                                                    <div class="custom-checkbox custom-control">
-                                                        <input type="checkbox" data-checkboxes="mygroup"
-                                                            class="custom-control-input"
-                                                            id="checkbox-{{$loop->iteration}}">
-                                                        <label for="checkbox-{{$loop->iteration}}"
-                                                            class="custom-control-label">&nbsp;</label>
-                                                    </div>
-                                                </td>
+                                                <td>{{$loop->iteration}}</td>
                                                 <td>{{ $administrasi->user->name }}</td>
                                                 <td>{{ $administrasi->Penilaian->sum('nilai_administrasi') }}</td>
                                                 <td>{{ $administrasi->Penilaian->sum('nilai_testulis') }}</td>

@@ -64,7 +64,8 @@ class TanyaJawabController extends Controller
      */
     public function edit($id)
     {
-        return view('pages.backend.juri.penilaian.tanyajawab.edit', compact('id'));
+        $penilaian= Penilaian::where('administrasi_id', $id)->where('juri_id', Auth::user()->id)->first();
+        return view('pages.backend.juri.penilaian.tanyajawab.edit', compact('id', 'penilaian'));
     }
 
     /**

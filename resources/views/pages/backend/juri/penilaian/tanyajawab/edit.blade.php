@@ -31,7 +31,8 @@ Edit Nilai
                             <div class="form-group">
                                 <label for="nama">Nilai</label>
                                 <input id="nilai_tanyajawab" type="text" class="form-control" name="nilai_tanyajawab"
-                                    value="{{$penilaian->nilai_tanyajawab}}" tabindex="1" required autofocus>
+                                    tabindex="1" value="{{$penilaian ? $penilaian->nilai_tanyajawab : '0'}}" required
+                                    autofocus>
                                 <div class="invalid-feedback">
                                     Silahkan Masukan Nilai!
                                 </div>
