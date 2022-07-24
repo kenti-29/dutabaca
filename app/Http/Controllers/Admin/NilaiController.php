@@ -78,7 +78,7 @@ class NilaiController extends Controller
         Administrasi::find($id)->update([
             'status'=>$request->status
         ]);
-        return redirect('/nilai-peserta');
+        return redirect('/administrasis-peserta');
     }
 
     /**

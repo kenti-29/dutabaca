@@ -17,7 +17,7 @@ class TanyaJawabController extends Controller
      */
     public function index()
     {
-         $administrasis = Administrasi::with(['user','penilaian' => function ($q)
+         $administrasis = Administrasi::where('status', 'lolos')->with(['user','penilaian' => function ($q)
      {
         $q->where('juri_id', Auth::user()->id);
      }])->get();

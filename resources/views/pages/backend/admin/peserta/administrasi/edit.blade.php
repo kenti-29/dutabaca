@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 @section('title')
-Nilai Peserta
+Status Hasil Seleksi
 @endsection
 
 @section('css')
@@ -12,10 +12,9 @@ Nilai Peserta
         <div class="section-header-back">
             <a href="{{url ('nilai-peserta')}}" class="btn btn-icon"><i class="fas fa-arrow-left"></i></a>
         </div>
-        <h1>Edit Nilai</h1>
+        <h1>Edit Status Hasil Seleksi</h1>
         <div class="section-header-breadcrumb">
             <div class="breadcrumb-item active"><a href="{{url ('dashboard-admin')}}">Dashboard</a></div>
-            <div class="breadcrumb-item">Edit Nilai</div>
         </div>
     </div>
 
@@ -24,7 +23,7 @@ Nilai Peserta
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4>Silahkan Masukan Nilai</h4>
+                        <h4>Silahkan Masukan Status Hasil Seleksi</h4>
                     </div>
                     <div class="card-body">
                         <form method="POST" action="{{route('nilai-peserta.update', $id)}}" class="needs-validation"
