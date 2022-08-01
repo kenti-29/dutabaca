@@ -20,40 +20,8 @@ class AdministrasiController extends Controller
      $administrasis = Administrasi::with(['user','penilaian' => function ($q)
      {
         $q->where('juri_id', Auth::user()->id);
-     }])->get();
+     }])->whereYear('created_at', date('Y'))->get();
         return view('pages.backend.juri.penilaian.administrasi.index', compact('administrasis')) ;
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
     }
 
     /**
@@ -101,16 +69,5 @@ class AdministrasiController extends Controller
             'nilai_administrasi'=> ($request->nilai_administrasi)
         ]);
         return redirect()->route('administrasi-juri.index')->with('status', 'Berhasil  Mengupdate Nilai');
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
     }
 }

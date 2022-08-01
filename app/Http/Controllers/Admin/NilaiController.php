@@ -15,43 +15,19 @@ class NilaiController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $administrasis = Administrasi::with(['Penilaian','user'])->get();
+        if ($request->tahun) {
+           $tahun=$request->tahun;
+            $administrasis = Administrasi::with(['Penilaian','user'])->whereYear('created_at', $request->tahun)->get(); 
+        }
+        else {
+            $tahun=date('Y');
+            $administrasis = Administrasi::with(['Penilaian','user'])->whereYear('created_at', date('Y'))->get();
+        }
+        
       
-        return view('pages.backend.admin.peserta.nilai.index', compact('administrasis'));
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
+        return view('pages.backend.admin.peserta.nilai.index', compact('administrasis', 'tahun'));
     }
 
     /**
@@ -79,16 +55,5 @@ class NilaiController extends Controller
             'status'=>$request->status
         ]);
         return redirect('/administrasis-peserta');
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
     }
 }
