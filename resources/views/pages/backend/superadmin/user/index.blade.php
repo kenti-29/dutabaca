@@ -44,7 +44,7 @@ Users
                                         'JURI')->count()}}</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="contact-tab3" data-toggle="tab" href="#contact3" role="tab"
+                                <a class="nav-link" id="contact-tab4" data-toggle="tab" href="#contact4" role="tab"
                                     aria-controls="contact" aria-selected="false">Kepala Dinas<span
                                         class="badge badge-primary">{{$users->where('role',
                                         'KEPALADINAS')->count()}}</span></a>
@@ -159,7 +159,7 @@ Users
                                     </table>
                                 </div>
                             </div>
-                            <div class="tab-pane fade" id="contact3" role="tabpanel" aria-labelledby="contact-tab3">
+                            <div class="tab-pane fade" id="contact4" role="tabpanel" aria-labelledby="contact-tab4">
                                 <div class="table-responsive">
                                     <table id="table-4" class="table table-striped">
                                         <thead>

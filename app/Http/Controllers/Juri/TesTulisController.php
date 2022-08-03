@@ -20,7 +20,7 @@ class TesTulisController extends Controller
         $administrasis = Administrasi::where('status', 'lolos')->with(['user','penilaian' => function ($q)
      {
         $q->where('juri_id', Auth::user()->id);
-     }])->get();
+     }])->whereYear('created_at', date('Y'))->get();
         return view('pages.backend.juri.penilaian.testulis.index', compact('administrasis')) ;
     }
 

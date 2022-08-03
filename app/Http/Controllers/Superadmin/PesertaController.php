@@ -15,21 +15,29 @@ class PesertaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index( Request $request)
     {
-        $administrasis = Administrasi::with(['Penilaian','user'])->get();
-        return view('pages.backend.superadmin.peserta.index', compact('administrasis'));
+         if ($request->tahun) {
+           $tahun=$request->tahun;
+            $administrasis = Administrasi::with(['Penilaian', 'user'])->whereYear('created_at', $request->tahun)->get(); 
+        }
+        else {
+            $tahun=date('Y');
+            $administrasis = Administrasi::with(['Penilaian', 'user'])->whereYear('created_at', date('Y'))->get(); 
+        }
+        return view('pages.backend.superadmin.peserta.index', compact('administrasis', 'tahun'));
+        
     }
 
-    public function laporanpendaftar()
+    public function laporanpendaftar(Request $request)
     {
-         $administrasis = Administrasi::with(['Penilaian','user'])->get();
+         $administrasis = Administrasi::with(['Penilaian','user'])->whereYear('created_at', $request->tahun)->get();
          $pdf = PDF::loadview('pages.backend.superadmin.peserta.laporanpendaftar', compact('administrasis'));
          return $pdf->stream('laporan-pendaftar.pdf');
     }
-    public function laporanpeserta()
+    public function laporanpeserta(Request $request)
     {
-         $administrasis = Administrasi::with(['Penilaian','user'])->where('status', 'lolos')->get();
+         $administrasis = Administrasi::with(['Penilaian','user'])->where('status', 'lolos')->whereYear('created_at', $request->tahun)->get();
          $pdf = PDF::loadview('pages.backend.superadmin.peserta.laporanpeserta', compact('administrasis'));
          return $pdf->stream('laporan-peserta.pdf');
     }

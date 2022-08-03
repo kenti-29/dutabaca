@@ -14,11 +14,17 @@ class PesertaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $administrasis = Administrasi::with(['Penilaian','user'])->get();
-        
-        return view('pages.backend.juri.peserta.index', compact('administrasis'));
+        if ($request->tahun) {
+           $tahun=$request->tahun;
+            $administrasis = Administrasi::with(['Penilaian', 'user'])->whereYear('created_at', $request->tahun)->get(); 
+        }
+        else {
+            $tahun=date('Y');
+            $administrasis = Administrasi::with(['Penilaian', 'user'])->whereYear('created_at', date('Y'))->get(); 
+        }
+        return view('pages.backend.juri.peserta.index', compact('administrasis', 'tahun'));
     }
 
     /**

@@ -61,6 +61,24 @@ Nilai Peserta
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
+                        <form action="">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <select name="tahun" class="form-control" id="">
+                                        @for ($i = date('Y'); $i >= 2021; $i--)
+                                        <option value="{{$i}}" {{ $tahun==$i ? 'selected' :''}}>
+                                            {{$i}}
+                                        </option>
+                                        @endfor
+                                    </select>
+                                </div>
+                                <div class="col-sm-3">
+                                    <button type="submit" class="btn btn-primary">
+                                        Filter
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
                         <div class="clearfix mb-3"></div>
                         <div class="tab-content" id="myTabContent1">
                             <div class="tab-pane fade show active" id="home1" role="tabpanel"

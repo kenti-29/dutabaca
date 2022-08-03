@@ -8,10 +8,17 @@ use Illuminate\Http\Request;
 
 class BiodataController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $users = User::where('role', 'PESERTA')->get();
-      
-        return view('pages.backend.admin.peserta.biodata.index', ['users'=>$users]);
+        if ($request->tahun) {
+           $tahun=$request->tahun;
+            $users = User::where('role', 'PESERTA')->whereYear('created_at', $request->tahun)->get(); 
+        }
+        else {
+            $tahun=date('Y');
+            $users = User::where('role', 'PESERTA')->whereYear('created_at', date('Y'))->get();
+        }
+        
+        return view('pages.backend.admin.peserta.biodata.index', ['users'=>$users,'tahun'=>$tahun ]);
     }
 }

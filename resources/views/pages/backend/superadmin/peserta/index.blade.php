@@ -12,12 +12,14 @@ Peserta
     <div class="section-header">
         <div class="section-header-button">
             <div class="float-left">
-                <a class="btn btn-success" href="{{url('/laporanpendaftar-superadmin')}}" target="_blank">Export Laporan
+                <a class="btn btn-success" href="{{url('/laporanpendaftar-superadmin')}}?tahun={{$tahun}}"
+                    target="_blank">Export Laporan
                     Semua
                     Pendaftar</a>
             </div>
             <div class="float-left ml-2">
-                <a class="btn btn-success" href="{{url('/laporanpeserta-superadmin')}}" target="_blank">Export Laporan
+                <a class="btn btn-success" href="{{url('/laporanpeserta-superadmin')}}?tahun={{$tahun}}"
+                    target="_blank">Export Laporan
                     Peserta Lolos
                 </a>
             </div>
@@ -70,6 +72,24 @@ Peserta
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
+                        <form action="">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <select name="tahun" class="form-control" id="">
+                                        @for ($i = date('Y'); $i >= 2021; $i--)
+                                        <option value="{{$i}}" {{ $tahun==$i ? 'selected' :''}}>
+                                            {{$i}}
+                                        </option>
+                                        @endfor
+                                    </select>
+                                </div>
+                                <div class="col-sm-3">
+                                    <button type="submit" class="btn btn-primary">
+                                        Filter
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
                         <div class="clearfix mb-3"></div>
                         <div class="tab-content" id="myTabContent1">
                             <div class="tab-pane fade show active" id="home1" role="tabpanel"
