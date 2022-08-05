@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Administrasi;
+use App\Models\Penilaian;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -74,6 +76,9 @@ class ManagementUserController extends Controller
      public function destroy($id)
     {
         User::findOrFail($id)->delete();
+        $administrasi=Administrasi::where('peserta_id',$id)->first();
+        Penilaian::where('administrasi_id',$administrasi->id)->delete();
+        Administrasi::where('peserta_id',$id)->delete();
         return redirect()->route('management-user.index')->with('status', 'Berhasil  Menghapus User');
     }
 }
