@@ -12,6 +12,10 @@ Dashboard Peserta
     <div class="section-header">
         <h1>Dashboard Peserta</h1>
     </div>
+    @if ($administrasi->cv==null)
+    <div class="alert alert-danger"> Silahkan lengkapi administrasi, untuk mengikuti seleksi Administrasi pada
+        Pendaftaran Duta Baca Kbupaten Indramayu</div>
+    @endif
     <div class="row">
         <div class="col-lg-3 col-md-6 col-sm-6 col-12">
             {{-- <a href="{{url('management-user')}}"> --}}

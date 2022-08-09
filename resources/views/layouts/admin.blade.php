@@ -80,8 +80,7 @@
                         </li>
                         <li class="nav-item {{Request::segment(1)=='management-user'? 'active':''}}">
                             <a href="{{ url('management-user') }}" class="nav-link "><i class="far fa-user"></i>
-                                <span>Manajemen
-                                    User</span></a>
+                                <span>Management Users</span></a>
                         </li>
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link has-dropdown"><i class="far fa-user"></i>

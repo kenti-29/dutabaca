@@ -75,10 +75,17 @@ class ManagementUserController extends Controller
 
      public function destroy($id)
     {
+        $user=User::findOrFail($id)->first();
+        if ($user->role=='PESERTA') {
+            $administrasi=Administrasi::where('peserta_id',$id)->first();
+            Penilaian::where('administrasi_id',$administrasi->id)->delete();
+            Administrasi::where('peserta_id',$id)->delete();
+        }
+        if ($user->role=='JURI') {
+            Penilaian::where('juri_id',$id)->delete();
+        }
         User::findOrFail($id)->delete();
-        $administrasi=Administrasi::where('peserta_id',$id)->first();
-        Penilaian::where('administrasi_id',$administrasi->id)->delete();
-        Administrasi::where('peserta_id',$id)->delete();
+        
         return redirect()->route('management-user.index')->with('status', 'Berhasil  Menghapus User');
     }
 }

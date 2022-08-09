@@ -12,9 +12,11 @@ class DashboardController extends Controller
 {
     public function index()
     {
+        $administrasi = Administrasi::where('peserta_id', Auth::user()->id)->first();
         return view('pages.backend.peserta.index', [
             'users' => User::count(),
             'peserta' => User::where('role', 'PESERTA')->count(),
+            'administrasi' => $administrasi
         ]);
     }
     public function hasilseleksi()

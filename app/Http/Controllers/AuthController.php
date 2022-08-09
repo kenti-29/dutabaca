@@ -85,6 +85,9 @@ class AuthController extends Controller
     public function destroy($id)
     {
         User::findOrFail($id)->delete();
+        $administrasi=Administrasi::where('peserta_id',$id)->first();
+        Penilaian::where('administrasi_id',$administrasi->id)->delete();
+        Administrasi::where('peserta_id',$id)->delete();
         return redirect()->route('management-users.index')->with('status', 'Berhasil  Menghapus User');
     }
 
@@ -101,7 +104,7 @@ class AuthController extends Controller
         $data = $request->all();
         $data['password'] = Hash::make($request->password);
         User::create($data);
-        return redirect()->route('management-user.index')->with('status', 'Berhasil Daftar Akun Duta Baca, Silahkan masuk menggunakan akun username dan password yang sudah didaftarkan');
+        return redirect()->route('management-user.index')->with('status', 'Berhasil Mendaftarkan Akun Duta Baca, Silahkan masuk menggunakan akun username dan password yang sudah didaftarkan');
     }
     public function lupapassword()
     {
